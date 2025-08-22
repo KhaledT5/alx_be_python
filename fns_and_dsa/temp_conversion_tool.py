@@ -1,12 +1,13 @@
-F_to_C_factor = 5/9
-C_to_F_factor = 9/5
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
+
 
 def convert_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * F_to_C_factor
-
+    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 def convert_to_fahrenheit(celsius):
-    return (celsius * C_to_F_factor) + 32
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
+
 
 if __name__ == "__main__":
     try:
