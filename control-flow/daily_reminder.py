@@ -1,20 +1,11 @@
-task = input("Enter your task: ")
-priority = input("Priority (high/medium/low): ").lower()
-time_bound = input("Is it time-bound? (yes/no): ").lower()
+outer_count = 5
 
-match priority:
-    case "high":
-        reminder = f"'{task}' is a high priority task"
-    case "medium":
-        reminder = f"'{task}' is a medium priority task"
-    case "low":
-        reminder = f"'{task}' is a low priority task"
-    case _:
-        reminder = f"'{task}' has an unknown priority level"
-
-if time_bound == "yes":
-    reminder += " that requires immediate attention today!"
-else:
-    reminder += ". Consider completing it when you have free time."
-
-print("Reminder:", reminder)
+while outer_count > 0:
+  # Outer loop controls the number of times the inner loop runs
+  inner_count = 1
+  while inner_count <= outer_count:
+    # Inner loop repeats for each outer loop iteration
+    print(inner_count, end=" ")
+    inner_count += 1
+  print()  # Move to a new line after each outer loop iteration
+  outer_count -= 1
